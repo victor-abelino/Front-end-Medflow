@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Grid2,Box, Typography,RadioGroup,Radio,FormControlLabel, FormLabel, FormControl } from '@mui/material';
+import { TextField, Button, Grid2,Box, Typography,RadioGroup,Radio,FormControlLabel, FormLabel, FormControl, Snackbar, Alert } from '@mui/material';
 
 export const Estoque = () => {
  
@@ -13,8 +13,12 @@ export const Estoque = () => {
     Validade: '',
     Embalagem: '',
     Perecivel: '',
-    Tipo: '',
+    Tipo: ''
   });
+
+  //constante que faz a notficação de cadastro
+  const [openSnaeckbar, setOpenSnackbar] = useState
+  (false);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
